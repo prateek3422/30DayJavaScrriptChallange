@@ -69,7 +69,7 @@ function greet(name) {
   console.log(`subject  ${name} : type ${typeof name}`);
 }
 greet(subject);
-greet(compleated);
+greet(completed);
 
 
 // 2. Reassignment Demo: Create a script that demonstrates the difference in behavior between let and
