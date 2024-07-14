@@ -34,6 +34,15 @@ const remainder = num9 % num10
 console.log(remainder)
 
 
+// Activity 2: Assignment Operators
+// Task 6: Use the +- operator to add a number to a variable and log the result to the console.
+let user = 5;
+user += 5;
+console.log(user);
+// • Task 7: Use the -- operator to subtract a number from a variable and log the result to the console.
+let items = 35;
+items -= 5;
+console.log(items);
 // Activity 3: Comparison Operators
 //  Task 8: Write a program to compare two numbers using > and < and log the result to the
 // console.
