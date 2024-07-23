@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi cupiditate aspernatur, illo laudantium iste blanditiis est, et doloremque fugiat ex reprehenderit aperiam hic dolores? Praesentium quod itaque alias accusantium facilis!</p>
+
+   <img  class="img" src="https://images.unsplash.com/photo-1721355623035-f2584b8efd79?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D" alt="">
+
+   <div class="container" style="border: 1px solid black; width: 500px; height: 500px; background-color: red;">
+   </div>
+
+   <input type="text" class="input" placeholder="Enter key down" style="margin-top: 2rem;">
+   <input type="text" class="input1" placeholder="Enter key up" style="margin-top: 2rem;">
+   <p class="para2"></p>
+
+   <form action="" method="post">
+    <input type="text" class="form-controll"> 
+    <button type="submit">Submit</button>
+   </form>
+
+   <select class="select">
+      <option value="web development">web development</option>
+      <option value="Javascript">Javascript</option>
+      <option value="devops">devops</option>
+   </select>
+
+   <div class="result"></div>
+   
+   <ul class="list">
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi cupiditate aspernatur, illo laudantium iste blanditiis est, et doloremque fugiat ex reprehenderit aperiam hic dolores? Praesentium quod itaque alias accusantium facilis!</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi cupiditate aspernatur, illo laudantium iste blanditiis est, et doloremque fugiat ex reprehenderit aperiam hic dolores? Praesentium quod itaque alias accusantium facilis!</li>
+     <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi cupiditate aspernatur, illo laudantium iste blanditiis est, et doloremque fugiat ex reprehenderit aperiam hic dolores? Praesentium quod itaque alias accusantium facilis!</li>
+   </ul>
+
+
+   <div id="parent">
+    <!-- Existing child elements -->
+    <div class="child">Child 1</div>
+    <div class="child">Child 2</div>
+</div>
+<button id="addChild">Add Child</button
+
+</body>
+
+<Script>
+    const p = document.querySelector(".para");
+    // task 1
+    p.addEventListener("click", function(){
+        p.innerHTML = "Hello World";
+    });
+
+    // task 2
+
+    const img = document.querySelector(".img");
+
+    img.addEventListener("dblclick", function(){
+        img.style = "visibility: hidden";
+    });
+
+
+    // task 3
+    const container = document.querySelector(".container");
+
+    container.addEventListener("mouseover", function(){
+        container.style = "border: 1px solid black; width: 500px; height: 500px; background-color: blue;";
+    });
+
+    // task 4
+    container.addEventListener("mouseout", function(){
+        container.style = "border: 1px solid black; width: 500px; height: 500px; background-color: red;";
+    });
+
+
+    // task-5
+    const input = document.querySelector(".input");
+
+    input.addEventListener("keydown", function(e){
+        if(e.key === "Enter"){
+            console.log("Enter key is pressed");
+        }
+    });
+
+    // task 6
+
+    const input1 = document.querySelector(".input1");
+    const para2 = document.querySelector(".para2");
+    input1.addEventListener("keyup", function(e){
+        para2.textContent = input1.value;
+    });
+
+    // task 7
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        console.log("Form submitted");
+        const input = document.querySelector(".form-controll");
+        alert(input.value);
+    })
+
+    // task 8
+
+    const select = document.querySelector(".select");
+    select.addEventListener("change", function(){
+        const result = document.querySelector(".result");
+        result.textContent = select.value;
+    })
+
+    // task 9
+    
+    const list = document.querySelector(".list");
+    list.addEventListener("click", function(e){
+        if(e.target.tagName === "LI"){
+       console.log(e.target.textContent);
+        }
+    });
+
+    // task 10
+    const parent = document.querySelector("#parent");
+    const addChild = document.querySelector("#addChild");
+
+    parent.addEventListener("click", function(){
+        const child = document.createElement("div");
+        child.classList.add("child");
+        child.textContent = "Child";
+        parent.appendChild(child);
+    });
+
+
+</Script>
+</html>
